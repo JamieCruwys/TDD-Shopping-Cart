@@ -28,7 +28,7 @@ public class DiscountedBasketUnitTest {
     @Test
     public void two_apples_should_be_price_of_one_apple_due_to_bogof() {
         Basket basket = new Basket();
-        basket.enableOffer(ApplesBuyOneGetOneFree());
+        basket.add(new ApplesBuyOneGetOneFreeOffer());
         basket.add(new Apple());
         basket.add(new Apple());
         BigDecimal actual = basket.getTotal();
