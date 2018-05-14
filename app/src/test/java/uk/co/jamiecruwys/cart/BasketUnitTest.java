@@ -6,10 +6,10 @@ import java.math.BigDecimal;
 
 import static org.junit.Assert.assertEquals;
 
-public class OrangesUnitTest {
+public class BasketUnitTest {
     @Test
-    public void apple_price_is_correct() {
-        BigDecimal actual = new Orange().getPrice();
-        assertEquals(new BigDecimal(0.25), actual);
+    public void empty_basket_value_is_0() {
+        BigDecimal actual = new Basket().getTotal();
+        assertEquals(new BigDecimal(0.00), actual);
     }
 }
