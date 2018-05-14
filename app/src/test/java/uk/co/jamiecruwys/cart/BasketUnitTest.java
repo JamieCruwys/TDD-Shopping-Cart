@@ -99,4 +99,15 @@ public class BasketUnitTest {
         BigDecimal actual = basket.getTotal();
         assertEquals(new BigDecimal(2.05).setScale(2, RoundingMode.HALF_UP), actual);
     }
+
+    @Test
+    public void three_apples_in_a_row_one_orange_basket_value_is_correct() {
+        Basket basket = new Basket();
+        basket.add(new Apple());
+        basket.add(new Apple());
+        basket.add(new Apple());
+        basket.add(new Orange());
+        BigDecimal actual = basket.getTotal();
+        assertEquals(new BigDecimal(2.05).setScale(2, RoundingMode.HALF_UP), actual);
+    }
 }
