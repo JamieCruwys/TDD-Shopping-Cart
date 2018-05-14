@@ -16,7 +16,7 @@ public class BasketUnitTest {
     @Test
     public void one_apple_basket_value_is_correct() {
         Basket basket = new Basket();
-        basket.add(Apple());
+        basket.add(new Apple());
         BigDecimal actual = basket.getTotal();
         assertEquals(new BigDecimal(0.60), actual);
     }
