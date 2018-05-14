@@ -12,13 +12,13 @@ import static org.junit.Assert.assertEquals;
 
 public class BasketUnitTest {
     @Test
-    public void empty_basket_value_is_0() {
+    public void empty_basket_total_is_0() {
         BigDecimal actual = new Basket().getTotal();
         assertEquals(new BigDecimal(0.00).setScale(2, RoundingMode.HALF_UP), actual);
     }
 
     @Test
-    public void one_apple_basket_value_is_correct() {
+    public void one_apple_basket_total_is_correct() {
         Basket basket = new Basket();
         basket.add(new Apple());
         BigDecimal actual = basket.getTotal();
@@ -26,7 +26,7 @@ public class BasketUnitTest {
     }
 
     @Test
-    public void two_apples_basket_value_is_correct() {
+    public void two_apples_basket_total_is_correct() {
         Basket basket = new Basket();
         basket.add(new Apple());
         basket.add(new Apple());
@@ -35,7 +35,7 @@ public class BasketUnitTest {
     }
 
     @Test
-    public void three_apples_basket_value_is_correct() {
+    public void three_apples_basket_total_is_correct() {
         Basket basket = new Basket();
         basket.add(new Apple());
         basket.add(new Apple());
@@ -45,7 +45,7 @@ public class BasketUnitTest {
     }
 
     @Test
-    public void one_orange_basket_value_is_correct() {
+    public void one_orange_basket_total_is_correct() {
         Basket basket = new Basket();
         basket.add(new Orange());
         BigDecimal actual = basket.getTotal();
@@ -53,7 +53,7 @@ public class BasketUnitTest {
     }
 
     @Test
-    public void two_oranges_basket_value_is_correct() {
+    public void two_oranges_basket_total_is_correct() {
         Basket basket = new Basket();
         basket.add(new Orange());
         basket.add(new Orange());
@@ -62,7 +62,7 @@ public class BasketUnitTest {
     }
 
     @Test
-    public void three_oranges_basket_value_is_correct() {
+    public void three_oranges_basket_total_is_correct() {
         Basket basket = new Basket();
         basket.add(new Orange());
         basket.add(new Orange());
@@ -72,7 +72,7 @@ public class BasketUnitTest {
     }
 
     @Test
-    public void one_orange_one_apple_basket_value_is_correct() {
+    public void one_orange_one_apple_basket_total_is_correct() {
         Basket basket = new Basket();
         basket.add(new Orange());
         basket.add(new Apple());
@@ -81,7 +81,7 @@ public class BasketUnitTest {
     }
 
     @Test
-    public void one_apple_one_orange_basket_value_is_correct() {
+    public void one_apple_one_orange_basket_total_is_correct() {
         Basket basket = new Basket();
         basket.add(new Apple());
         basket.add(new Orange());
@@ -90,7 +90,7 @@ public class BasketUnitTest {
     }
 
     @Test
-    public void three_apples_one_orange_basket_value_is_correct() {
+    public void three_apples_one_orange_basket_total_is_correct() {
         Basket basket = new Basket();
         basket.add(new Apple());
         basket.add(new Apple());
@@ -101,7 +101,7 @@ public class BasketUnitTest {
     }
 
     @Test
-    public void three_apples_in_a_row_one_orange_basket_value_is_correct() {
+    public void three_apples_in_a_row_one_orange_basket_total_is_correct() {
         Basket basket = new Basket();
         basket.add(new Apple());
         basket.add(new Apple());
@@ -112,7 +112,7 @@ public class BasketUnitTest {
     }
 
     @Test
-    public void three_oranges_one_apple_basket_value_is_correct() {
+    public void three_oranges_one_apple_basket_total_is_correct() {
         Basket basket = new Basket();
         basket.add(new Orange());
         basket.add(new Orange());
@@ -123,7 +123,7 @@ public class BasketUnitTest {
     }
 
     @Test
-    public void three_oranges_in_a_row_one_apple_basket_value_is_correct() {
+    public void three_oranges_in_a_row_one_apple_basket_total_is_correct() {
         Basket basket = new Basket();
         basket.add(new Orange());
         basket.add(new Orange());
