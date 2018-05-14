@@ -4,8 +4,7 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.ArrayList;
 
-import uk.co.jamiecruwys.cart.products.Apple;
-import uk.co.jamiecruwys.cart.products.Orange;
+import uk.co.jamiecruwys.cart.offers.Offer;
 import uk.co.jamiecruwys.cart.products.Product;
 
 public class Basket {

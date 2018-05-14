@@ -1,8 +1,9 @@
-package uk.co.jamiecruwys.cart;
+package uk.co.jamiecruwys.cart.offers;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
 
+import uk.co.jamiecruwys.cart.Basket;
 import uk.co.jamiecruwys.cart.products.Apple;
 import uk.co.jamiecruwys.cart.products.Product;
 

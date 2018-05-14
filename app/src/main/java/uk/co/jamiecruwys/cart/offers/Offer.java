@@ -1,6 +1,8 @@
-package uk.co.jamiecruwys.cart;
+package uk.co.jamiecruwys.cart.offers;
 
 import java.math.BigDecimal;
+
+import uk.co.jamiecruwys.cart.Basket;
 
 public abstract class Offer {
     /**
