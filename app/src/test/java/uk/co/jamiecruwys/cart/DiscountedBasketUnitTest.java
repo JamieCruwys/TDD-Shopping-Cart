@@ -6,6 +6,7 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 
 import uk.co.jamiecruwys.cart.offers.ApplesBuyOneGetOneFreeOffer;
+import uk.co.jamiecruwys.cart.offers.OrangesThreeForTwoOffer;
 import uk.co.jamiecruwys.cart.products.Apple;
 import uk.co.jamiecruwys.cart.products.Orange;
 
@@ -75,6 +76,7 @@ public class DiscountedBasketUnitTest {
     @Test
     public void one_orange_normal_price() {
         Basket basket = new Basket();
+        basket.add(new OrangesThreeForTwoOffer());
         basket.add(new Orange());
         BigDecimal actual = basket.getTotal();
         assertEquals(new BigDecimal(0.25).setScale(2, RoundingMode.HALF_UP), actual);
@@ -83,6 +85,18 @@ public class DiscountedBasketUnitTest {
     @Test
     public void two_oranges_normal_price() {
         Basket basket = new Basket();
+        basket.add(new OrangesThreeForTwoOffer());
+        basket.add(new Orange());
+        basket.add(new Orange());
+        BigDecimal actual = basket.getTotal();
+        assertEquals(new BigDecimal(0.50).setScale(2, RoundingMode.HALF_UP), actual);
+    }
+
+    @Test
+    public void three_oranges_for_price_of_two() {
+        Basket basket = new Basket();
+        basket.add(new OrangesThreeForTwoOffer());
+        basket.add(new Orange());
         basket.add(new Orange());
         basket.add(new Orange());
         BigDecimal actual = basket.getTotal();
