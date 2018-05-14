@@ -11,6 +11,6 @@ public class Basket {
     }
 
     public BigDecimal getTotal() {
-        return total.setScale(2, RoundingMode.CEILING);
+        return total.setScale(2, RoundingMode.HALF_UP);
     }
 }
