@@ -4,6 +4,8 @@ import org.junit.Test;
 
 import java.math.BigDecimal;
 
+import uk.co.jamiecruwys.cart.products.Apple;
+
 import static org.junit.Assert.*;
 
 public class ApplesUnitTest {

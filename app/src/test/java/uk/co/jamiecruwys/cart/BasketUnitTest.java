@@ -5,6 +5,9 @@ import org.junit.Test;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
+import uk.co.jamiecruwys.cart.products.Apple;
+import uk.co.jamiecruwys.cart.products.Orange;
+
 import static org.junit.Assert.assertEquals;
 
 public class BasketUnitTest {
