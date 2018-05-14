@@ -40,4 +40,12 @@ public class BasketUnitTest {
         BigDecimal actual = basket.getTotal();
         assertEquals(new BigDecimal(1.80).setScale(2, RoundingMode.HALF_UP), actual);
     }
+
+    @Test
+    public void one_orange_basket_value_is_correct() {
+        Basket basket = new Basket();
+        basket.add(new Orange());
+        BigDecimal actual = basket.getTotal();
+        assertEquals(new BigDecimal(0.25).setScale(2, RoundingMode.HALF_UP), actual);
+    }
 }
