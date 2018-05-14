@@ -12,4 +12,12 @@ public class BasketUnitTest {
         BigDecimal actual = new Basket().getTotal();
         assertEquals(new BigDecimal(0.00), actual);
     }
+
+    @Test
+    public void one_apple_basket_value_is_correct() {
+        Basket basket = new Basket();
+        basket.add(Apple());
+        BigDecimal actual = basket.getTotal();
+        assertEquals(new BigDecimal(0.60), actual);
+    }
 }
