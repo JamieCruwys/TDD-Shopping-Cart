@@ -7,6 +7,7 @@ import java.math.RoundingMode;
 
 import uk.co.jamiecruwys.cart.offers.ApplesBuyOneGetOneFreeOffer;
 import uk.co.jamiecruwys.cart.products.Apple;
+import uk.co.jamiecruwys.cart.products.Orange;
 
 import static org.junit.Assert.assertEquals;
 
@@ -69,5 +70,13 @@ public class DiscountedBasketUnitTest {
         basket.add(new Apple());
         BigDecimal actual = basket.getTotal();
         assertEquals(new BigDecimal(1.80).setScale(2, RoundingMode.HALF_UP), actual);
+    }
+
+    @Test
+    public void one_orange_normal_price() {
+        Basket basket = new Basket();
+        basket.add(new Orange());
+        BigDecimal actual = basket.getTotal();
+        assertEquals(new BigDecimal(0.25).setScale(2, RoundingMode.HALF_UP), actual);
     }
 }
