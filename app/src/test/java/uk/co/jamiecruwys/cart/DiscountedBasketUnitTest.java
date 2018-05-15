@@ -172,4 +172,21 @@ public class DiscountedBasketUnitTest {
         BigDecimal actual = basket.getTotal();
         assertEquals(new BigDecimal(1.50).setScale(2, RoundingMode.HALF_UP), actual);
     }
+
+    @Test
+    public void nine_oranges_for_price_of_six() {
+        Basket basket = new Basket();
+        basket.add(new OrangesThreeForTwoOffer());
+        basket.add(new Orange());
+        basket.add(new Orange());
+        basket.add(new Orange());
+        basket.add(new Orange());
+        basket.add(new Orange());
+        basket.add(new Orange());
+        basket.add(new Orange());
+        basket.add(new Orange());
+        basket.add(new Orange());
+        BigDecimal actual = basket.getTotal();
+        assertEquals(new BigDecimal(1.50).setScale(2, RoundingMode.HALF_UP), actual);
+    }
 }
