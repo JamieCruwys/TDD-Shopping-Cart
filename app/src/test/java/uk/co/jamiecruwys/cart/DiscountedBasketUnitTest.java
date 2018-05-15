@@ -203,6 +203,7 @@ public class DiscountedBasketUnitTest {
         basket.add(new Orange());
         basket.add(new Orange());
         basket.add(new Orange());
+        basket.add(new Orange());
         BigDecimal actual = basket.getTotal();
         assertEquals(new BigDecimal(1.75).setScale(2, RoundingMode.HALF_UP), actual);
     }
