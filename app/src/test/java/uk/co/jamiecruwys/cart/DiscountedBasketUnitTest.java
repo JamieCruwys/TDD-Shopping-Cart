@@ -221,4 +221,23 @@ public class DiscountedBasketUnitTest {
         BigDecimal actual = basket.getTotal();
         assertEquals(new BigDecimal(1.10).setScale(2, RoundingMode.HALF_UP), actual);
     }
+
+    @Test
+    public void four_apples_six_oranges() {
+        Basket basket = new Basket();
+        basket.add(new ApplesBuyOneGetOneFreeOffer());
+        basket.add(new OrangesThreeForTwoOffer());
+        basket.add(new Apple());
+        basket.add(new Apple());
+        basket.add(new Apple());
+        basket.add(new Apple());
+        basket.add(new Orange());
+        basket.add(new Orange());
+        basket.add(new Orange());
+        basket.add(new Orange());
+        basket.add(new Orange());
+        basket.add(new Orange());
+        BigDecimal actual = basket.getTotal();
+        assertEquals(new BigDecimal(2.20).setScale(2, RoundingMode.HALF_UP), actual);
+    }
 }
