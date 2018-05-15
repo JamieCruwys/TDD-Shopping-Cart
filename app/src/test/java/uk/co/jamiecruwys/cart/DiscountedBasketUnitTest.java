@@ -191,7 +191,7 @@ public class DiscountedBasketUnitTest {
     }
 
     @Test
-    public void nine_oranges_for_price_of_six_plus_one() {
+    public void ten_oranges_for_price_of_six_plus_one() {
         Basket basket = new Basket();
         basket.add(new OrangesThreeForTwoOffer());
         basket.add(new Orange());
