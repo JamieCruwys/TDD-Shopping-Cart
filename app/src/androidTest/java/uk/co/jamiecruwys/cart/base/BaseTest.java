@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
  * Declares @RunWith(AndroidJUnit4.class) so all of the other tests don't need to
  */
 @RunWith(AndroidJUnit4.class)
-abstract class BaseTest {
+abstract public class BaseTest {
 	/**
 	 * Convenience method to get the context
 	 * @return {@link Context}
