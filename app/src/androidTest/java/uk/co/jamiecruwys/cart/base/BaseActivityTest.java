@@ -1,4 +1,4 @@
-package uk.co.jamiecruwys.cart;
+package uk.co.jamiecruwys.cart.base;
 
 import android.app.Activity;
 import android.support.test.rule.ActivityTestRule;

@@ -1,4 +1,4 @@
-package uk.co.jamiecruwys.cart;
+package uk.co.jamiecruwys.cart.base;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
