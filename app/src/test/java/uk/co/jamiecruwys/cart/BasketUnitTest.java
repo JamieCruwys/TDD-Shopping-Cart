@@ -18,7 +18,7 @@ public class BasketUnitTest {
     	// Given
         BigDecimal actual = new Basket().getTotal();
 
-        // When
+		// When
 		// Basket is empty
 
         // Then
@@ -35,45 +35,45 @@ public class BasketUnitTest {
         BigDecimal actual = basket.getTotal();
 
         // Then
-	    BigDecimal apples = new Apple().getPrice().multiply(new BigDecimal(1.0));
-	    BigDecimal expected = apples.setScale(2, RoundingMode.HALF_UP);
-	
-	    assertEquals(expected, actual);
+		BigDecimal apples = new Apple().getPrice().multiply(new BigDecimal(1.0));
+		BigDecimal expected = apples.setScale(2, RoundingMode.HALF_UP);
+		
+		assertEquals(expected, actual);
     }
 
     @Test
     public void two_apples_basket_total_is_correct() {
         //Given
     	Basket basket = new Basket();
-        basket.add(new Apple());
-        basket.add(new Apple());
+		basket.add(new Apple());
+		basket.add(new Apple());
 
         // When
         BigDecimal actual = basket.getTotal();
 
-        // Then
-	    BigDecimal apples = new Apple().getPrice().multiply(new BigDecimal(2.0));
-	    BigDecimal expected = apples.setScale(2, RoundingMode.HALF_UP);
-	
-	    assertEquals(expected, actual);
+		// Then
+		BigDecimal apples = new Apple().getPrice().multiply(new BigDecimal(2.0));
+		BigDecimal expected = apples.setScale(2, RoundingMode.HALF_UP);
+		
+		assertEquals(expected, actual);
     }
 
     @Test
     public void three_apples_basket_total_is_correct() {
     	// Given
         Basket basket = new Basket();
-        basket.add(new Apple());
-        basket.add(new Apple());
-        basket.add(new Apple());
+		basket.add(new Apple());
+		basket.add(new Apple());
+		basket.add(new Apple());
 
         // When
         BigDecimal actual = basket.getTotal();
 
-        // Then
-	    BigDecimal apples = new Apple().getPrice().multiply(new BigDecimal(3.0));
-	    BigDecimal expected = apples.setScale(2, RoundingMode.HALF_UP);
-	
-	    assertEquals(expected, actual);
+		// Then
+		BigDecimal apples = new Apple().getPrice().multiply(new BigDecimal(3.0));
+		BigDecimal expected = apples.setScale(2, RoundingMode.HALF_UP);
+		
+		assertEquals(expected, actual);
     }
 
     @Test
@@ -85,11 +85,11 @@ public class BasketUnitTest {
         // When
         BigDecimal actual = basket.getTotal();
 
-        // Then
-	    BigDecimal oranges = new Orange().getPrice().multiply(new BigDecimal(1.0));
-	    BigDecimal expected = oranges.setScale(2, RoundingMode.HALF_UP);
-	
-	    assertEquals(expected, actual);
+		// Then
+		BigDecimal oranges = new Orange().getPrice().multiply(new BigDecimal(1.0));
+		BigDecimal expected = oranges.setScale(2, RoundingMode.HALF_UP);
+		
+		assertEquals(expected, actual);
     }
 
     @Test
@@ -102,11 +102,11 @@ public class BasketUnitTest {
         // When
         BigDecimal actual = basket.getTotal();
 
-        // Then
-	    BigDecimal oranges = new Orange().getPrice().multiply(new BigDecimal(2.0));
-	    BigDecimal expected = oranges.setScale(2, RoundingMode.HALF_UP);
-	
-	    assertEquals(expected, actual);
+		// Then
+		BigDecimal oranges = new Orange().getPrice().multiply(new BigDecimal(2.0));
+		BigDecimal expected = oranges.setScale(2, RoundingMode.HALF_UP);
+		
+		assertEquals(expected, actual);
     }
 
     @Test
@@ -120,11 +120,11 @@ public class BasketUnitTest {
         // When
         BigDecimal actual = basket.getTotal();
 
-        // Then
-	    BigDecimal oranges = new Orange().getPrice().multiply(new BigDecimal(3.0));
-	    BigDecimal expected = oranges.setScale(2, RoundingMode.HALF_UP);
-	
-	    assertEquals(expected, actual);
+		// Then
+		BigDecimal oranges = new Orange().getPrice().multiply(new BigDecimal(3.0));
+		BigDecimal expected = oranges.setScale(2, RoundingMode.HALF_UP);
+		
+		assertEquals(expected, actual);
     }
 
     @Test
@@ -137,12 +137,12 @@ public class BasketUnitTest {
         // When
         BigDecimal actual = basket.getTotal();
 
-        // Then
-	    BigDecimal oranges = new Orange().getPrice().multiply(new BigDecimal(1.0));
-	    BigDecimal apples = new Apple().getPrice().multiply(new BigDecimal(1.0));
-	    BigDecimal expected = oranges.add(apples).setScale(2, RoundingMode.HALF_UP);
-	
-	    assertEquals(expected, actual);
+		// Then
+		BigDecimal oranges = new Orange().getPrice().multiply(new BigDecimal(1.0));
+		BigDecimal apples = new Apple().getPrice().multiply(new BigDecimal(1.0));
+		BigDecimal expected = oranges.add(apples).setScale(2, RoundingMode.HALF_UP);
+		
+		assertEquals(expected, actual);
     }
 
     @Test
@@ -155,12 +155,12 @@ public class BasketUnitTest {
         // When
         BigDecimal actual = basket.getTotal();
 
-        // Then
-	    BigDecimal oranges = new Orange().getPrice().multiply(new BigDecimal(1.0));
-	    BigDecimal apples = new Apple().getPrice().multiply(new BigDecimal(1.0));
-	    BigDecimal expected = oranges.add(apples).setScale(2, RoundingMode.HALF_UP);
-	
-	    assertEquals(expected, actual);
+		// Then
+		BigDecimal oranges = new Orange().getPrice().multiply(new BigDecimal(1.0));
+		BigDecimal apples = new Apple().getPrice().multiply(new BigDecimal(1.0));
+		BigDecimal expected = oranges.add(apples).setScale(2, RoundingMode.HALF_UP);
+		
+		assertEquals(expected, actual);
     }
 
     @Test
@@ -175,12 +175,12 @@ public class BasketUnitTest {
         // When
         BigDecimal actual = basket.getTotal();
 
-        // Then
-	    BigDecimal oranges = new Orange().getPrice().multiply(new BigDecimal(1.0));
-	    BigDecimal apples = new Apple().getPrice().multiply(new BigDecimal(3.0));
-	    BigDecimal expected = oranges.add(apples).setScale(2, RoundingMode.HALF_UP);
-	
-	    assertEquals(expected, actual);
+		// Then
+		BigDecimal oranges = new Orange().getPrice().multiply(new BigDecimal(1.0));
+		BigDecimal apples = new Apple().getPrice().multiply(new BigDecimal(3.0));
+		BigDecimal expected = oranges.add(apples).setScale(2, RoundingMode.HALF_UP);
+		
+		assertEquals(expected, actual);
     }
 
     @Test
@@ -195,12 +195,12 @@ public class BasketUnitTest {
         // When
         BigDecimal actual = basket.getTotal();
 
-        // Then
-	    BigDecimal oranges = new Orange().getPrice().multiply(new BigDecimal(1.0));
-	    BigDecimal apples = new Apple().getPrice().multiply(new BigDecimal(3.0));
-	    BigDecimal expected = oranges.add(apples).setScale(2, RoundingMode.HALF_UP);
-	
-	    assertEquals(expected, actual);
+		// Then
+		BigDecimal oranges = new Orange().getPrice().multiply(new BigDecimal(1.0));
+		BigDecimal apples = new Apple().getPrice().multiply(new BigDecimal(3.0));
+		BigDecimal expected = oranges.add(apples).setScale(2, RoundingMode.HALF_UP);
+		
+		assertEquals(expected, actual);
     }
 
     @Test
@@ -215,12 +215,12 @@ public class BasketUnitTest {
         // When
         BigDecimal actual = basket.getTotal();
 
-        // Then
-	    BigDecimal oranges = new Orange().getPrice().multiply(new BigDecimal(3.0));
-	    BigDecimal apples = new Apple().getPrice().multiply(new BigDecimal(1.0));
-	    BigDecimal expected = oranges.add(apples).setScale(2, RoundingMode.HALF_UP);
-	
-	    assertEquals(expected, actual);
+		// Then
+		BigDecimal oranges = new Orange().getPrice().multiply(new BigDecimal(3.0));
+		BigDecimal apples = new Apple().getPrice().multiply(new BigDecimal(1.0));
+		BigDecimal expected = oranges.add(apples).setScale(2, RoundingMode.HALF_UP);
+		
+		assertEquals(expected, actual);
     }
 
     @Test
@@ -235,12 +235,12 @@ public class BasketUnitTest {
         // When
         BigDecimal actual = basket.getTotal();
 
-        // Then
-	    BigDecimal oranges = new Orange().getPrice().multiply(new BigDecimal(3.0));
-	    BigDecimal apples = new Apple().getPrice().multiply(new BigDecimal(1.0));
-	    BigDecimal expected = oranges.add(apples).setScale(2, RoundingMode.HALF_UP);
-	    
-	    assertEquals(expected, actual);
+		// Then
+		BigDecimal oranges = new Orange().getPrice().multiply(new BigDecimal(3.0));
+		BigDecimal apples = new Apple().getPrice().multiply(new BigDecimal(1.0));
+		BigDecimal expected = oranges.add(apples).setScale(2, RoundingMode.HALF_UP);
+		
+		assertEquals(expected, actual);
     }
 
 	/**
