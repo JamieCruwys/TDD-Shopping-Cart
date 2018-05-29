@@ -1,4 +1,4 @@
-package uk.co.jamiecruwys.cart;
+package uk.co.jamiecruwys.cart.products;
 
 import org.junit.Test;
 
