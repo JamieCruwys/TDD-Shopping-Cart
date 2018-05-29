@@ -4,20 +4,18 @@ import org.junit.Test;
 
 import java.math.BigDecimal;
 
-import uk.co.jamiecruwys.cart.products.Orange;
-
 import static org.junit.Assert.assertEquals;
 
 public class OrangesUnitTest {
-    @Test
-    public void orange_price_is_correct() {
-    	// Given
-    	Orange orange = new Orange();
-
-    	// When
-        BigDecimal actual = orange.getPrice();
-
-        // Then
-        assertEquals(new BigDecimal(0.25), actual);
-    }
+	@Test
+	public void orange_price_is_correct() {
+		// Given
+		Orange orange = new Orange();
+		
+		// When
+		BigDecimal actual = orange.getPrice();
+		
+		// Then
+		assertEquals(new BigDecimal(0.25), actual);
+	}
 }
