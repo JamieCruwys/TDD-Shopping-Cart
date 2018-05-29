@@ -25,19 +25,22 @@ public class MockitoUnitTest {
 	private Basket basket = new Basket();
 
 	@Before
-	public void setUp() throws Exception {
+	public void setUp() {
 		MockitoAnnotations.initMocks(this);
 		when(productContract.getPrice()).thenReturn(new BigDecimal(0.01).setScale(2, RoundingMode.HALF_UP));
 	}
 
 	@Test
 	public void basket_works_with_custom_items() {
+		// Given
 		basket.add(productContract);
 		basket.add(productContract);
 		basket.add(productContract);
 
+		// When
 		BigDecimal total = basket.getTotal();
 
+		// Then
 		InOrder inOrder = Mockito.inOrder(productContract);
 		inOrder.verify(productContract).getPrice();
 		inOrder.verify(productContract).getPrice();
