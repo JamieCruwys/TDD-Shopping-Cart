@@ -32,12 +32,15 @@ public class MockitoUnitTest {
 
 	@Test
 	public void basket_works_with_custom_items() {
+		// Given
 		basket.add(productContract);
 		basket.add(productContract);
 		basket.add(productContract);
 
+		// When
 		BigDecimal total = basket.getTotal();
 
+		// Then
 		InOrder inOrder = Mockito.inOrder(productContract);
 		inOrder.verify(productContract).getPrice();
 		inOrder.verify(productContract).getPrice();
