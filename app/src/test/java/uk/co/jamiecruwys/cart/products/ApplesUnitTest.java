@@ -16,6 +16,6 @@ public class ApplesUnitTest {
 		BigDecimal actual = apple.getPrice();
 		
 		// Then
-		assertEquals(new BigDecimal(0.6), actual);
+		assertEquals(new BigDecimal(0.60), actual);
 	}
 }
