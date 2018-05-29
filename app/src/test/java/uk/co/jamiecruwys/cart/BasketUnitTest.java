@@ -35,7 +35,10 @@ public class BasketUnitTest {
         BigDecimal actual = basket.getTotal();
 
         // Then
-        assertEquals(new BigDecimal(0.60).setScale(2, RoundingMode.HALF_UP), actual);
+	    BigDecimal apples = new Apple().getPrice().multiply(new BigDecimal(1.0));
+	    BigDecimal expected = apples.setScale(2, RoundingMode.HALF_UP);
+	
+	    assertEquals(expected, actual);
     }
 
     @Test
@@ -49,7 +52,10 @@ public class BasketUnitTest {
         BigDecimal actual = basket.getTotal();
 
         // Then
-        assertEquals(new BigDecimal(1.20).setScale(2, RoundingMode.HALF_UP), actual);
+	    BigDecimal apples = new Apple().getPrice().multiply(new BigDecimal(2.0));
+	    BigDecimal expected = apples.setScale(2, RoundingMode.HALF_UP);
+	
+	    assertEquals(expected, actual);
     }
 
     @Test
@@ -64,7 +70,10 @@ public class BasketUnitTest {
         BigDecimal actual = basket.getTotal();
 
         // Then
-        assertEquals(new BigDecimal(1.80).setScale(2, RoundingMode.HALF_UP), actual);
+	    BigDecimal apples = new Apple().getPrice().multiply(new BigDecimal(3.0));
+	    BigDecimal expected = apples.setScale(2, RoundingMode.HALF_UP);
+	
+	    assertEquals(expected, actual);
     }
 
     @Test
@@ -77,7 +86,10 @@ public class BasketUnitTest {
         BigDecimal actual = basket.getTotal();
 
         // Then
-        assertEquals(new BigDecimal(0.25).setScale(2, RoundingMode.HALF_UP), actual);
+	    BigDecimal oranges = new Orange().getPrice().multiply(new BigDecimal(1.0));
+	    BigDecimal expected = oranges.setScale(2, RoundingMode.HALF_UP);
+	
+	    assertEquals(expected, actual);
     }
 
     @Test
@@ -91,7 +103,10 @@ public class BasketUnitTest {
         BigDecimal actual = basket.getTotal();
 
         // Then
-        assertEquals(new BigDecimal(0.50).setScale(2, RoundingMode.HALF_UP), actual);
+	    BigDecimal oranges = new Orange().getPrice().multiply(new BigDecimal(2.0));
+	    BigDecimal expected = oranges.setScale(2, RoundingMode.HALF_UP);
+	
+	    assertEquals(expected, actual);
     }
 
     @Test
@@ -106,7 +121,10 @@ public class BasketUnitTest {
         BigDecimal actual = basket.getTotal();
 
         // Then
-        assertEquals(new BigDecimal(0.75).setScale(2, RoundingMode.HALF_UP), actual);
+	    BigDecimal oranges = new Orange().getPrice().multiply(new BigDecimal(3.0));
+	    BigDecimal expected = oranges.setScale(2, RoundingMode.HALF_UP);
+	
+	    assertEquals(expected, actual);
     }
 
     @Test
@@ -120,7 +138,11 @@ public class BasketUnitTest {
         BigDecimal actual = basket.getTotal();
 
         // Then
-        assertEquals(new BigDecimal(0.85).setScale(2, RoundingMode.HALF_UP), actual);
+	    BigDecimal oranges = new Orange().getPrice().multiply(new BigDecimal(1.0));
+	    BigDecimal apples = new Apple().getPrice().multiply(new BigDecimal(1.0));
+	    BigDecimal expected = oranges.add(apples).setScale(2, RoundingMode.HALF_UP);
+	
+	    assertEquals(expected, actual);
     }
 
     @Test
@@ -134,7 +156,11 @@ public class BasketUnitTest {
         BigDecimal actual = basket.getTotal();
 
         // Then
-        assertEquals(new BigDecimal(0.85).setScale(2, RoundingMode.HALF_UP), actual);
+	    BigDecimal oranges = new Orange().getPrice().multiply(new BigDecimal(1.0));
+	    BigDecimal apples = new Apple().getPrice().multiply(new BigDecimal(1.0));
+	    BigDecimal expected = oranges.add(apples).setScale(2, RoundingMode.HALF_UP);
+	
+	    assertEquals(expected, actual);
     }
 
     @Test
@@ -150,7 +176,11 @@ public class BasketUnitTest {
         BigDecimal actual = basket.getTotal();
 
         // Then
-        assertEquals(new BigDecimal(2.05).setScale(2, RoundingMode.HALF_UP), actual);
+	    BigDecimal oranges = new Orange().getPrice().multiply(new BigDecimal(1.0));
+	    BigDecimal apples = new Apple().getPrice().multiply(new BigDecimal(3.0));
+	    BigDecimal expected = oranges.add(apples).setScale(2, RoundingMode.HALF_UP);
+	
+	    assertEquals(expected, actual);
     }
 
     @Test
@@ -166,7 +196,11 @@ public class BasketUnitTest {
         BigDecimal actual = basket.getTotal();
 
         // Then
-        assertEquals(new BigDecimal(2.05).setScale(2, RoundingMode.HALF_UP), actual);
+	    BigDecimal oranges = new Orange().getPrice().multiply(new BigDecimal(1.0));
+	    BigDecimal apples = new Apple().getPrice().multiply(new BigDecimal(3.0));
+	    BigDecimal expected = oranges.add(apples).setScale(2, RoundingMode.HALF_UP);
+	
+	    assertEquals(expected, actual);
     }
 
     @Test
@@ -182,7 +216,11 @@ public class BasketUnitTest {
         BigDecimal actual = basket.getTotal();
 
         // Then
-        assertEquals(new BigDecimal(1.35).setScale(2, RoundingMode.HALF_UP), actual);
+	    BigDecimal oranges = new Orange().getPrice().multiply(new BigDecimal(3.0));
+	    BigDecimal apples = new Apple().getPrice().multiply(new BigDecimal(1.0));
+	    BigDecimal expected = oranges.add(apples).setScale(2, RoundingMode.HALF_UP);
+	
+	    assertEquals(expected, actual);
     }
 
     @Test
@@ -198,7 +236,11 @@ public class BasketUnitTest {
         BigDecimal actual = basket.getTotal();
 
         // Then
-        assertEquals(new BigDecimal(1.35).setScale(2, RoundingMode.HALF_UP), actual);
+	    BigDecimal oranges = new Orange().getPrice().multiply(new BigDecimal(3.0));
+	    BigDecimal apples = new Apple().getPrice().multiply(new BigDecimal(1.0));
+	    BigDecimal expected = oranges.add(apples).setScale(2, RoundingMode.HALF_UP);
+	    
+	    assertEquals(expected, actual);
     }
 
 	/**
@@ -214,7 +256,8 @@ public class BasketUnitTest {
 		BigDecimal actual = new Basket().getTotal();
 		
 		// Then
-		assertEquals(new BigDecimal(0.00).setScale(2, RoundingMode.HALF_UP), actual);
+		BigDecimal expected = new BigDecimal(0.00).setScale(2, RoundingMode.HALF_UP);
+		assertEquals(expected, actual);
 	}
 	
 	@Test
@@ -227,7 +270,14 @@ public class BasketUnitTest {
 		BigDecimal actual = basket.getTotal();
 		
 		// Then
-		assertEquals(new BigDecimal(0.60).setScale(2, RoundingMode.HALF_UP), actual);
+		
+		// Customer pays for 1/1 apples
+		BigDecimal apples = new Apple().getPrice().multiply(new BigDecimal(1.0));
+		
+		// Customer gets 0 free apples
+		BigDecimal expected = apples.setScale(2, RoundingMode.HALF_UP);
+		
+		assertEquals(expected, actual);
 	}
 	
 	@Test
@@ -242,7 +292,14 @@ public class BasketUnitTest {
 		BigDecimal actual = basket.getTotal();
 		
 		// Then
-		assertEquals(new BigDecimal(0.60).setScale(2, RoundingMode.HALF_UP), actual);
+		
+		// Customer pays for 1/2 apples
+		BigDecimal apples = new Apple().getPrice().multiply(new BigDecimal(1.0));
+		
+		// Customer gets 1 free apple
+		BigDecimal expected = apples.setScale(2, RoundingMode.HALF_UP);
+		
+		assertEquals(expected, actual);
 	}
 	
 	@Test
@@ -258,7 +315,14 @@ public class BasketUnitTest {
 		BigDecimal actual = basket.getTotal();
 		
 		// Then
-		assertEquals(new BigDecimal(1.20).setScale(2, RoundingMode.HALF_UP), actual);
+		
+		// Customer pays for 2/3 apples
+		BigDecimal apples = new Apple().getPrice().multiply(new BigDecimal(2.0));
+		
+		// Customer gets 1 free apple
+		BigDecimal expected = apples.setScale(2, RoundingMode.HALF_UP);
+		
+		assertEquals(expected, actual);
 	}
 	
 	@Test
@@ -275,7 +339,14 @@ public class BasketUnitTest {
 		BigDecimal actual = basket.getTotal();
 		
 		// Then
-		assertEquals(new BigDecimal(1.20).setScale(2, RoundingMode.HALF_UP), actual);
+		
+		// Customer pays for 2/4 apples
+		BigDecimal apples = new Apple().getPrice().multiply(new BigDecimal(2.0));
+		
+		// Customer gets 2 free apples
+		BigDecimal expected = apples.setScale(2, RoundingMode.HALF_UP);
+		
+		assertEquals(expected, actual);
 	}
 	
 	@Test
@@ -293,7 +364,14 @@ public class BasketUnitTest {
 		BigDecimal actual = basket.getTotal();
 		
 		// Then
-		assertEquals(new BigDecimal(1.80).setScale(2, RoundingMode.HALF_UP), actual);
+		
+		// Customer pays for 3/5 apples
+		BigDecimal apples = new Apple().getPrice().multiply(new BigDecimal(3.0));
+		
+		// Customer gets 0 free apples
+		BigDecimal expected = apples.setScale(2, RoundingMode.HALF_UP);
+		
+		assertEquals(expected, actual);
 	}
 	
 	@Test
@@ -307,7 +385,14 @@ public class BasketUnitTest {
 		BigDecimal actual = basket.getTotal();
 		
 		// Then
-		assertEquals(new BigDecimal(0.25).setScale(2, RoundingMode.HALF_UP), actual);
+		
+		// Customer pays for 1/1 oranges
+		BigDecimal oranges = new Orange().getPrice().multiply(new BigDecimal(1.0));
+		
+		// Customer gets 0 free oranges
+		BigDecimal expected = oranges.setScale(2, RoundingMode.HALF_UP);
+		
+		assertEquals(expected, actual);
 	}
 	
 	@Test
@@ -322,7 +407,14 @@ public class BasketUnitTest {
 		BigDecimal actual = basket.getTotal();
 		
 		// Then
-		assertEquals(new BigDecimal(0.50).setScale(2, RoundingMode.HALF_UP), actual);
+		
+		// Customer pays for 2/2 oranges
+		BigDecimal oranges = new Orange().getPrice().multiply(new BigDecimal(2.0));
+		
+		// Customer gets 0 free oranges
+		BigDecimal expected = oranges.setScale(2, RoundingMode.HALF_UP);
+		
+		assertEquals(expected, actual);
 	}
 	
 	@Test
@@ -338,7 +430,14 @@ public class BasketUnitTest {
 		BigDecimal actual = basket.getTotal();
 		
 		// Then
-		assertEquals(new BigDecimal(0.50).setScale(2, RoundingMode.HALF_UP), actual);
+		
+		// Customer pays for 2/3 oranges
+		BigDecimal oranges = new Orange().getPrice().multiply(new BigDecimal(2.0));
+		
+		// Customer gets 1 free orange
+		BigDecimal expected = oranges.setScale(2, RoundingMode.HALF_UP);
+		
+		assertEquals(expected, actual);
 	}
 	
 	@Test
@@ -355,7 +454,14 @@ public class BasketUnitTest {
 		BigDecimal actual = basket.getTotal();
 		
 		// Then
-		assertEquals(new BigDecimal(0.75).setScale(2, RoundingMode.HALF_UP), actual);
+		
+		// Customer pays for 3/4 oranges
+		BigDecimal oranges = new Orange().getPrice().multiply(new BigDecimal(3.0));
+		
+		// Customer gets 1 free orange
+		BigDecimal expected = oranges.setScale(2, RoundingMode.HALF_UP);
+		
+		assertEquals(expected, actual);
 	}
 	
 	@Test
@@ -373,7 +479,14 @@ public class BasketUnitTest {
 		BigDecimal actual = basket.getTotal();
 		
 		// Then
-		assertEquals(new BigDecimal(1.00).setScale(2, RoundingMode.HALF_UP), actual);
+		
+		// Customer pays for 4/5 oranges
+		BigDecimal oranges = new Orange().getPrice().multiply(new BigDecimal(4.0));
+		
+		// Customer gets 1 free orange
+		BigDecimal expected = oranges.setScale(2, RoundingMode.HALF_UP);
+		
+		assertEquals(expected, actual);
 	}
 	
 	@Test
@@ -392,7 +505,14 @@ public class BasketUnitTest {
 		BigDecimal actual = basket.getTotal();
 		
 		// Then
-		assertEquals(new BigDecimal(1.00).setScale(2, RoundingMode.HALF_UP), actual);
+		
+		// Customer pays for 4/6 oranges
+		BigDecimal oranges = new Orange().getPrice().multiply(new BigDecimal(4.0));
+		
+		// Customer gets 2 free oranges
+		BigDecimal expected = oranges.setScale(2, RoundingMode.HALF_UP);
+		
+		assertEquals(expected, actual);
 	}
 	
 	@Test
@@ -412,7 +532,14 @@ public class BasketUnitTest {
 		BigDecimal actual = basket.getTotal();
 		
 		// Then
-		assertEquals(new BigDecimal(1.25).setScale(2, RoundingMode.HALF_UP), actual);
+		
+		// Customer pays for 5/7 oranges
+		BigDecimal oranges = new Orange().getPrice().multiply(new BigDecimal(5.0));
+		
+		// Customer gets 2 free oranges
+		BigDecimal expected = oranges.setScale(2, RoundingMode.HALF_UP);
+		
+		assertEquals(expected, actual);
 	}
 	
 	@Test
@@ -433,7 +560,14 @@ public class BasketUnitTest {
 		BigDecimal actual = basket.getTotal();
 		
 		// Then
-		assertEquals(new BigDecimal(1.50).setScale(2, RoundingMode.HALF_UP), actual);
+		
+		// Customer pays for 6/8 oranges
+		BigDecimal oranges = new Orange().getPrice().multiply(new BigDecimal(6.0));
+		
+		// Customer gets 2 oranges free
+		BigDecimal expected = oranges.setScale(2, RoundingMode.HALF_UP);
+		
+		assertEquals(expected, actual);
 	}
 	
 	@Test
@@ -455,7 +589,14 @@ public class BasketUnitTest {
 		BigDecimal actual = basket.getTotal();
 		
 		// Then
-		assertEquals(new BigDecimal(1.50).setScale(2, RoundingMode.HALF_UP), actual);
+		
+		// Customer pays for 6/9 oranges
+		BigDecimal oranges = new Orange().getPrice().multiply(new BigDecimal(6.0));
+		
+		// Customer gets 3 oranges free
+		BigDecimal expected = oranges.setScale(2, RoundingMode.HALF_UP);
+		
+		assertEquals(expected, actual);
 	}
 	
 	@Test
@@ -478,7 +619,14 @@ public class BasketUnitTest {
 		BigDecimal actual = basket.getTotal();
 		
 		// Then
-		assertEquals(new BigDecimal(1.75).setScale(2, RoundingMode.HALF_UP), actual);
+		
+		// Customer pays for 7/10 oranges
+		BigDecimal oranges = new Orange().getPrice().multiply(new BigDecimal(7.0));
+		
+		// Customer gets 3 oranges free
+		BigDecimal expected = oranges.setScale(2, RoundingMode.HALF_UP);
+		
+		assertEquals(expected, actual);
 	}
 	
 	@Test
@@ -497,7 +645,17 @@ public class BasketUnitTest {
 		BigDecimal actual = basket.getTotal();
 		
 		// Then
-		assertEquals(new BigDecimal(1.10).setScale(2, RoundingMode.HALF_UP), actual);
+		
+		// Customer pays for 2/3 oranges
+		BigDecimal oranges = new Orange().getPrice().multiply(new BigDecimal(2.0));
+		
+		// Customer pays for 1/2 apples
+		BigDecimal apples = new Apple().getPrice().multiply(new BigDecimal(1.0));
+		
+		// Customer gets 1 oranges and 1 apples free
+		BigDecimal expected = oranges.add(apples).setScale(2, RoundingMode.HALF_UP);
+		
+		assertEquals(expected, actual);
 	}
 	
 	@Test
@@ -521,6 +679,16 @@ public class BasketUnitTest {
 		BigDecimal actual = basket.getTotal();
 		
 		// Then
-		assertEquals(new BigDecimal(2.20).setScale(2, RoundingMode.HALF_UP), actual);
+		
+		// Customer pays for 4/6 oranges
+		BigDecimal oranges = new Orange().getPrice().multiply(new BigDecimal(4.0));
+		
+		// Customer pays for 2/4 apples
+		BigDecimal apples = new Apple().getPrice().multiply(new BigDecimal(2.0));
+		
+		// Customer gets 2 oranges and 2 apples free
+		BigDecimal expected = oranges.add(apples).setScale(2, RoundingMode.HALF_UP);
+		
+		assertEquals(expected, actual);
 	}
 }
