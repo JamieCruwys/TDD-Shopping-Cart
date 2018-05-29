@@ -11,7 +11,13 @@ import static org.junit.Assert.assertEquals;
 public class OrangesUnitTest {
     @Test
     public void orange_price_is_correct() {
-        BigDecimal actual = new Orange().getPrice();
+    	// Given
+    	Orange orange = new Orange();
+
+    	// When
+        BigDecimal actual = orange.getPrice();
+
+        // Then
         assertEquals(new BigDecimal(0.25), actual);
     }
 }
