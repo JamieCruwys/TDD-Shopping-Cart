@@ -25,7 +25,7 @@ public class MockitoUnitTest {
 	private Basket basket = new Basket();
 
 	@Before
-	public void setUp() throws Exception {
+	public void setUp() {
 		MockitoAnnotations.initMocks(this);
 		when(productContract.getPrice()).thenReturn(new BigDecimal(0.01).setScale(2, RoundingMode.HALF_UP));
 	}
